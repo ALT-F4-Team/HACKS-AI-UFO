@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Результат</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Результат</h1>
+
+  <h2>Должностные обязанности</h2>
+  <p>{{ duties }}</p>
+
+  <h2>Условия</h2>
+  <p>{{ conditions }}</p>
+
+  <h2>Требования к соискателю</h2>
+  <p>{{ requirements }}</p>
+
+  <p><a href="/help">Помощь</a></p>
+  
+  <form action="/download" method="post">
+    <input type="hidden" name="duties" value="{{ duties }}">
+    <input type="hidden" name="conditions" value="{{ conditions }}">
+    <input type="hidden" name="requirements" value="{{ requirements }}">
+    <label for="filename">Название файла:</label>
+    <input type="text" id="filename" name="filename" required>
+    <button type="submit">Скачать результат</button>
+  </form>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Вакансия</title>
+  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <h1>Вакансия</h1>
+
+  <form action="/result" method="post">
+    <label for="inputText">Введите текст:</label>
+    <input type="text" id="inputText" name="inputText">
+    <button type="submit">Распределить</button>
+  </form>
+
+  <br> <!-- Пустая строка -->
+
+  <form action="/upload" method="post" enctype="multipart/form-data">
+    <label for="file">Загрузить файл:</label>
+    <input type="file" id="file" name="file">
+    <button type="submit">Загрузить</button>
+  </form>
+
+  <p><a href="/help">Помощь</a></p>
+</body>
+</html>
