@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request, send_file, url_for
 from model import CustomTextClassifier
-from process_utils import predict
+from process_utils import predict, clear_text
 from torch import load as torchload
 from torch import device as torchdevice
 import os
@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 classifier = CustomTextClassifier('cointegrated/rubert-tiny', 'cointegrated/rubert-tiny', n_classes=3)
-classifier.model = torchload('C:\\Users\\user\\Desktop\\Кейс\\web\\models\\bert_val_acc=0.85.pt', map_location=torchdevice('cpu'))
+classifier.model = torchload('C:\\Users\\user\\Desktop\\Кейс\\web\\models\\tiny_f1=0.9.pt', map_location=torchdevice('cpu'))
 
 idx2labels = {
     0: 'Требования',
@@ -24,6 +24,7 @@ def index():
 def result():
     input_text = request.form['inputText']
 
+    input_text = clear_text(input_text)
     classes = predict(classifier, input_text, idx2labels)
 
     duties = '.\n'.join(classes['Обязанности'])
