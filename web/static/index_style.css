@@ -58,7 +58,7 @@ main{
     letter-spacing: 2px;
 }
 
-.text-form button:hover, .upload-form button:hover {
+.text-form button:hover, .upload-form button:hover, .get-random-button:hover {
     background: #3d30c2;
 }
 
@@ -98,5 +98,17 @@ main{
 
 .upload-form input {
     display: none;
+}
+
+.get-random-button {
+    width: 100%;
+    padding: 15px;
+    background-color: #4c38f2;
+    border: 1px transparent solid;
+    border-radius: 5px;
+    font-size: 18px;
+    color:white;
+    letter-spacing: 2px;
+    cursor: pointer;
 }
 

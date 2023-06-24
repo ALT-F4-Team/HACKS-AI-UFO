@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 classifier = CustomTextClassifier('cointegrated/rubert-tiny', 'cointegrated/rubert-tiny', n_classes=3)
-classifier.model = torchload('C:\\Users\\user\\Desktop\\Кейс\\web\\models\\bert_val_acc=0.91.pt', map_location=torchdevice('cpu'))
+classifier.model = torchload('C:\\Users\\user\\Desktop\\Кейс\\web\\models\\bert_val_acc=0.85.pt', map_location=torchdevice('cpu'))
 
 idx2labels = {
     0: 'Требования',

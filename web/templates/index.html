@@ -24,6 +24,15 @@
         <input type="file" id="file" name="file">
         <button type="submit">Сформировать</button>
     </form>
+    <button onclick="getRandomText()" class="get-random-button">Сгененрировать вакансию</button>
 </main>
 </body>
+<script>
+async function getRandomText(){
+  let res = await fetch("http://193.187.96.161:5000/get_random")
+  res = await res.json()
+  await console.log(res)
+  document.querySelector(".text-form textarea").value = res.text
+}
+</script>
 </html>
