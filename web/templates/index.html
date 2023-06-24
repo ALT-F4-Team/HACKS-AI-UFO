@@ -1,26 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Вакансия</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Вакансия</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index_style.css') }}">
 </head>
 <body>
-  <h1>Вакансия</h1>
+</br>
+<h1>Формирование вакансий</h1>
+</br>
 
-  <form action="/result" method="post" class="text-form">
-    <label for="inputText">Введите текст:</label>
-    <textarea type="text" id="inputText" name="inputText" rows="15" cols="40" style="resize: none;"></textarea>
-    <button type="submit">Распределить</button>
-  </form>
+<main>
+    <form action="/result" method="post" class="text-form">
+        <label for="inputText">Введите исходный текст:</label>
+        <textarea type="text" id="inputText" name="inputText" rows="15" cols="40" style="resize: none;"></textarea>
+        <button type="submit"> Сформировать</button>
+    </form>
 
-  <br> <!-- Пустая строка -->
+    <br> <!-- Пустая строка -->
 
-  <form action="/upload" method="post" enctype="multipart/form-data">
-    <label for="file">Загрузить файл:</label>
-    <input type="file" id="file" name="file">
-    <button type="submit">Загрузить</button>
-  </form>
-
-  <p><a href="/help">Помощь</a></p>
+    <span class="title-upload">Загрузите файл для с несколькими вакансиями:</span>
+    <form action="/upload" method="post" enctype="multipart/form-data" class="upload-form">
+        <label for="file">Загрузить файл:</label>
+        <input type="file" id="file" name="file">
+        <button type="submit">Сформировать</button>
+    </form>
+</main>
 </body>
 </html>

@@ -1,35 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Результат</title>
-  <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
+    <title>Результат</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='result_style.css') }}">
 </head>
 <body>
-  <h1>Результат</h1>
+<main>
+    <h1>Результат</h1>
 
-  <div class="results">
-    <h3>Должностные обязанности</h3>
-    <pre>{{ duties }}</pre>
+    <div class="results">
+        <h3>Должностные обязанности</h3>
+        <pre>{{ duties }}</pre>
 
-    <h3>Условия</h3>
-    <pre>{{ conditions }}</pre>
+        <h3>Условия</h3>
+        <pre>{{ conditions }}</pre>
 
-    <h3>Требования к соискателю</h3>
-    <pre>{{ requirements }}</pre>
-  </div>
+        <h3>Требования к соискателю</h3>
+        <pre>{{ requirements }}</pre>
+    </div>
 
 
-
-  
-  <form action="/download" method="post">
-    <input type="hidden" name="duties" value="{{ duties }}">
-    <input type="hidden" name="conditions" value="{{ conditions }}">
-    <input type="hidden" name="requirements" value="{{ requirements }}">
-    <label for="filename">Название файла:</label>
-    <input type="text" id="filename" name="filename" required>
-    <button type="submit">Скачать результат</button>
-  </form>
-
-  <p><a href="/help">Помощь</a></p>
+    <form action="/download" method="post" class="output-form">
+        <input type="hidden" name="duties" value="{{ duties }}">
+        <input type="hidden" name="conditions" value="{{ conditions }}">
+        <input type="hidden" name="requirements" value="{{ requirements }}">
+        <label for="filename">Название файла:</label>
+        <div>
+            <input type="text" id="filename" name="filename" required>
+            <button type="submit">Скачать результат</button>
+        </div>
+    </form>
+</main>
 </body>
 </html>
