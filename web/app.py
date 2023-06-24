@@ -57,16 +57,18 @@ def upload():
         file.save(file.filename)
         df = pd.read_csv(file.filename)
         if 'Должностные обязанности' in df.columns:
-            input_text = ' '.join(df['Должностные обязанности'].tolist())
-            input_text = clear_text(input_text)
-            classes = predict(classifier, input_text, idx2labels)
+            data = []
+            for input_text in df['Должностные обязанности']:
+                input_text = clear_text(input_text)
+                classes = predict(classifier, input_text, idx2labels)
 
-            conditions = '.\n'.join(classes['Условия'])
-            requirements = '.\n'.join(classes['Требования'])
+                classes['Обязанности'] = '. '.join(classes['Обязанности'])
+                classes['Условия'] = '. '.join(classes['Условия'])
+                classes['Требования'] = '. '.join(classes['Требования'])
 
-            df['Условия'] = conditions
-            df['Требования к соискателю'] = requirements
+                data.append(classes)
 
+            df = pd.DataFrame.from_records(data)
             output_filename = 'output.csv'
             df.to_csv(output_filename, index=False)
             return send_file(output_filename, as_attachment=True)
