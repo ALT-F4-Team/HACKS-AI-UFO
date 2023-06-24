@@ -8,7 +8,7 @@ import os
 app = Flask(__name__)
 
 classifier = CustomTextClassifier('cointegrated/rubert-tiny', 'cointegrated/rubert-tiny', n_classes=3)
-classifier.model = torchload('C:\\Users\\user\\Desktop\\Кейс\\web\\models\\tiny_f1=0.9.pt', map_location=torchdevice('cpu'))
+classifier.model = torchload('/home/UFOHACK/models/bert_val_acc=0.85.pt', map_location=torchdevice('cpu'))
 
 idx2labels = {
     0: 'Требования',
@@ -48,17 +48,33 @@ def download():
         file.write(result_text)
     return send_file(filename, as_attachment=True)
 
+import pandas as pd
+
 @app.route('/upload', methods=['POST'])
 def upload():
     file = request.files['file']
-    if file.filename.endswith('.txt'):
+    if file.filename.endswith('.csv'):
         file.save(file.filename)
-        with open(file.filename, 'r') as file:
-            content = file.read()
-        os.remove(file.filename)
-        return result_from_text(content)
+        df = pd.read_csv(file.filename)
+        if 'Должностные обязанности' in df.columns:
+            input_text = ' '.join(df['Должностные обязанности'].tolist())
+            input_text = clear_text(input_text)
+            classes = predict(classifier, input_text, idx2labels)
+
+            conditions = '.\n'.join(classes['Условия'])
+            requirements = '.\n'.join(classes['Требования'])
+
+            df['Условия'] = conditions
+            df['Требования к соискателю'] = requirements
+
+            output_filename = 'output.csv'
+            df.to_csv(output_filename, index=False)
+            return send_file(output_filename, as_attachment=True)
+        else:
+            return "Файл CSV не содержит столбец 'Должностные обязанности'."
     else:
-        return "Неправильный формат файла. Пожалуйста, загрузите файл в формате txt."
+        return "Неправильный формат файла. Пожалуйста, загрузите файл в формате CSV."
+
 
 def result_from_text(text):
     duties = text[::3]
@@ -68,4 +84,3 @@ def result_from_text(text):
 
 if __name__ == '__main__':
     app.run(host='0.0.0.0')
-

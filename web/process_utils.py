@@ -2,6 +2,7 @@ import re
 
 
 def predict(model, text, idx2labels):
+    model.model.eval()
 
     ans = {
         'Требования': [],
