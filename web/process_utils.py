@@ -18,11 +18,17 @@ def predict(model, text, idx2labels):
 
 
 def clear_text(text):
-    pattern = 'QWERTYUIOPLKJHGFDSAZXCVBNMЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧЁСМИТЬйцукенгшщзхъэждлорпаёвыфячсмитьбюqwertyuioplkjhgfdsazxcvbnm1234567890/-;.,·\n!? '
+    pattern = 'QWERTYUIOPLKJHGFDSAZXCVBNMЙЦУКЕНГШЩЗХЪЭЖДЛОРПАВЫФЯЧЁБбСМИТЬйцукенгшщзхъэждлорпаёвыфячсмитьбюqwertyuioplkjhgfdsazxcvbnm1234567890/-;.,·!? '
 
     text = ''.join(list(filter(lambda x: x in pattern, text)))
-    text = text.replace('т.д.', ' ').replace('т.п.', ' ').replace('т.ч.', ' ').replace('Обязанности', '')
 
-    text = text.replace('.', 'split').replace(';', 'split').replace(' - ', 'split').split('split')
+    # text = re.split(r' [a-zA-Zа-яА-Я0-9]{2} *[!?\-.;].', text)
+
+    text = text.replace('Обязанности', 'split').replace('Условия', 'split').replace('Должностные обязанности', 'split').replace('Обязанности', 'split').replace('Требования', 'split')
+    text = re.sub(r'(?<=[;•.!?])\s+', 'split', text)
+    text = text.split('split')
+    text = [i for i in text if len(i.split()) > 1]
+
+    text = [i[i.find(re.search(r'[a-zA-Zа-яА-Я0-9]', i).group(0)):] for i in text]
 
     return text

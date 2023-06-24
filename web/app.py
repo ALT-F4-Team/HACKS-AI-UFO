@@ -27,9 +27,9 @@ def result():
     input_text = clear_text(input_text)
     classes = predict(classifier, input_text, idx2labels)
 
-    duties = '.\n'.join(classes['Обязанности'])
-    conditions = '.\n'.join(classes['Условия'])
-    requirements = '.\n'.join(classes['Требования'])
+    duties = '\n'.join(classes['Обязанности'])
+    conditions = '\n'.join(classes['Условия'])
+    requirements = '\n'.join(classes['Требования'])
 
     return render_template('result.html', duties=duties, conditions=conditions, requirements=requirements)
 

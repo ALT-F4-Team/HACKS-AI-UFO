@@ -21,6 +21,18 @@ form {
   margin: 0 auto;
 }
 
+.results {
+  width: 40%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
+pre {
+  white-space: pre-wrap;
+  overflow: auto;
+  max-height: 700px;
+}
+
 input[type="text"] {
   padding: 8px;
   width: 300px;

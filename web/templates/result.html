@@ -7,16 +7,19 @@
 <body>
   <h1>Результат</h1>
 
-  <h2>Должностные обязанности</h2>
-  <p>{{ duties }}</p>
+  <div class="results">
+    <h3>Должностные обязанности</h3>
+    <pre>{{ duties }}</pre>
 
-  <h2>Условия</h2>
-  <p>{{ conditions }}</p>
+    <h3>Условия</h3>
+    <pre>{{ conditions }}</pre>
 
-  <h2>Требования к соискателю</h2>
-  <p>{{ requirements }}</p>
+    <h3>Требования к соискателю</h3>
+    <pre>{{ requirements }}</pre>
+  </div>
 
-  <p><a href="/help">Помощь</a></p>
+
+
   
   <form action="/download" method="post">
     <input type="hidden" name="duties" value="{{ duties }}">
@@ -26,5 +29,7 @@
     <input type="text" id="filename" name="filename" required>
     <button type="submit">Скачать результат</button>
   </form>
+
+  <p><a href="/help">Помощь</a></p>
 </body>
 </html>
