@@ -25,7 +25,7 @@ def clear_text(text):
     # text = re.split(r' [a-zA-Zа-яА-Я0-9]{2} *[!?\-.;].', text)
 
     text = text.replace('Обязанности', 'split').replace('Условия', 'split').replace('Должностные обязанности', 'split').replace('Обязанности', 'split').replace('Требования', 'split')
-    text = re.sub(r'(?<=[;•.!?])\s+', 'split', text)
+    text = re.sub(r'(?<=[;•.!?])', 'split', text)
     text = text.split('split')
     text = [i for i in text if len(i.split()) > 1]
 
