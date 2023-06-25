@@ -26,15 +26,23 @@ main{
 
 }
 
+.results {
+  width: 40%;
+  margin: 0 auto;
+  word-wrap: break-word;
+}
+
 .results pre {
     color: rgb(45, 45, 45);
     background-color: white;
     border: 1px white solid;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     text-align: left;
     font-size: 15px;
     font-family: "lineyka";
+    white-space: pre-wrap;
+    max-height: 700px;
 }
 
 .output-form {
@@ -57,7 +65,7 @@ main{
 }
 
 .output-form div > button{
-    width: 55%;
+    width: 100%;
     padding: 15px 0;
     background: #4c38f2;
     color: white;
@@ -66,7 +74,6 @@ main{
     border-radius: 5px;
     transition: 0.1s all ease-in-out;
     cursor: pointer;
-    margin-left: 20px;
     box-sizing: border-box;
 }
 

@@ -17,19 +17,19 @@
 
         <h3>Требования к соискателю</h3>
         <pre>{{ requirements }}</pre>
-    </div>
 
-
-    <form action="/download" method="post" class="output-form">
+        <form action="/download" method="post" class="output-form">
         <input type="hidden" name="duties" value="{{ duties }}">
         <input type="hidden" name="conditions" value="{{ conditions }}">
         <input type="hidden" name="requirements" value="{{ requirements }}">
-        <label for="filename">Название файла:</label>
         <div>
-            <input type="text" id="filename" name="filename" required>
-            <button type="submit">Скачать результат</button>
+            <button type="submit">Выгрузить в EXEL</button>
         </div>
     </form>
+    </div>
+
+
+
 </main>
 </body>
 </html>
