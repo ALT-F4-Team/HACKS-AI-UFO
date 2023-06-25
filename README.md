@@ -1,4 +1,4 @@
-<h1 align="center">Формирование вакансий</h1>
+<h1 align="center">Формирование вакансий (ALT+F4)</h1>
 
 ### Модель доступна по <a href="https://drive.google.com/file/d/1a-o-HGmqrslVKZeUEBC2yGgW9RxxM8xX/view?usp=drive_link">ссылке<a/>
 
@@ -16,6 +16,9 @@
   </li>
   <li>
     Transformers
+  </li>
+  <li>
+    IO
   </li>
 </ul>
 
