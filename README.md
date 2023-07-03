@@ -1,4 +1,6 @@
-<h1 align="center">Формирование вакансий, проект команды ALT+F4</h1>
+<h1 align="center">Формирование вакансий, проект команды ALT+F4  
+
+<a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3"><img src="https://img.shields.io/badge/1%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D1%80%D1%8B%D0%B2-0af560?logo=git&logoColor=d513eb&style=plastic"></img></h1></a>
 
 ### Немного о истории проекта:
 <p>Данные проект был разработан за 2 дня во время хакатона <a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3">
@@ -32,8 +34,8 @@
 ### Инструкции по запуску веб-приложения
  
 <ul>
-  <li>Скачать модель</li>
-  <li>Поместить её в папку <b>models</b> в корне папке <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a></li>
+  <li>Скачать модель по ссылке ниже</li>
+  <li>Поместить её в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/522a3ffb6b32cab7a6ccabd2b27099021d264654/web/models"><b>models</b></a> в корне папке <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a></li>
   <li>вставте <a href="https://github.com/seyoulax/vacansies_classifier_V1/blob/ca19c9b1ed35b7985cb489e3d797359f67b5f715/web/app.py#L15">здесь</a> путь к модели</li>
   <li>Через терминал зайти в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a> и выполнить команду</li>
   <li>
