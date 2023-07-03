@@ -1,8 +1,13 @@
-<h1 align="center">Формирование вакансий (ALT+F4)</h1>
+<h1 align="center">Формирование вакансий, проект команды ALT+F4</h1>
 
-### Модель доступна по <a href="https://drive.google.com/file/d/1a-o-HGmqrslVKZeUEBC2yGgW9RxxM8xX/view?usp=drive_link">ссылке<a/>
+### Немного о истории проекта:
+<p>Данные проект был разработан за 2 дня во время хакатона <a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3">
+    <b><i>Цифровой прорыв 2023 УФО</i></b></a> и занял <b>1 место</b> в кейсе от компании <a href="https://roskapstroy.ru/"><b><i>Роскапстрой</i></b></a>
+</p>
 
-### Библиотеки и фреймворки
+---
+
+### Использованные технологии
 
 <ul>
   <li>
@@ -22,12 +27,22 @@
   </li>
 </ul>
 
+---
+
 ### Инструкции по запуску веб-приложения
  
 <ul>
   <li>Скачать модель</li>
-  <li>Поместить её в папку <b>models</b> в корне папке web</li>
-  <li>В файле <b>app.py</b> в <b>11 строчке</b> указать путь к модели</li>
-  <li>Через терминал зайти в папку <b>web</b></li>
-  <li>Выполнить команду <b>app.py</b></li>
+  <li>Поместить её в папку <b>models</b> в корне папке <b>web</b></li>
+  <li>вставте <a href="https://github.com/seyoulax/vacansies_classifier_V1/blob/ca19c9b1ed35b7985cb489e3d797359f67b5f715/web/app.py#L15">здесь</a> путь к модели</li>
+  <li>Через терминал зайти в папку <b>web</b> и выполнить команду</li>
+  <li>
+    
+```Shell
+python app.py
+```
+
+  </li>
 </ul>
+
+### Модель доступна по <a href="https://drive.google.com/file/d/1a-o-HGmqrslVKZeUEBC2yGgW9RxxM8xX/view?usp=drive_link">ссылке<a/>
