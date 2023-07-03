@@ -1,4 +1,4 @@
-<h1 align="center">Хакатон-проект: кейс - "Обработка Вакансий"
+<h1 align="center">Хакатон-проект: кейс - "Обработка Вакансий", Команда ALT+F4
 
 <a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3"><img src="https://img.shields.io/badge/1%20%D0%BC%D0%B5%D1%81%D1%82%D0%BE%20%D0%A6%D0%B8%D1%84%D1%80%D0%BE%D0%B2%D0%BE%D0%B9%20%D0%BF%D1%80%D0%BE%D1%80%D1%8B%D0%B2-0af560?logo=git&logoColor=d513eb&style=plastic"></img></a>
 <img src="https://img.shields.io/badge/hackathon--project-d513eb">
@@ -8,7 +8,7 @@
 ### LIVE DEMO <a href="http://193.187.96.161:5000/">ЗДЕСЬ</a> 
 
 ### Немного о истории проекта:
-<p>Данные проект был разработан за 2 дня в рамках хакатона <a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3">
+<p>Команда <b>ALT+F4</b> представляет проект, который был разработан за 2 дня в рамках хакатона <a href="https://hacks-ai.ru/hackathons.html?eventId=969074&caseEl=981627&tab=3">
     <b><i>Цифровой прорыв 2023 УФО</i></b></a> и занял <b>1 место</b> в кейсе от компании <a href="https://roskapstroy.ru/"><b><i>Роскапстрой</i></b></a>
 </p>
 
