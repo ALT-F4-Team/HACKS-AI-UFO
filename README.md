@@ -33,9 +33,9 @@
  
 <ul>
   <li>Скачать модель</li>
-  <li>Поместить её в папку <b>models</b> в корне папке <b>web</b></li>
+  <li>Поместить её в папку <b>models</b> в корне папке <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a></li>
   <li>вставте <a href="https://github.com/seyoulax/vacansies_classifier_V1/blob/ca19c9b1ed35b7985cb489e3d797359f67b5f715/web/app.py#L15">здесь</a> путь к модели</li>
-  <li>Через терминал зайти в папку <b>web</b> и выполнить команду</li>
+  <li>Через терминал зайти в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a> и выполнить команду</li>
   <li>
     
 ```Shell
