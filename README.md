@@ -61,7 +61,7 @@ pip install -r requirements.txt
   <li>
     
 ```Shell
-python app.py
+py app.py
 ```
 
   </li>
