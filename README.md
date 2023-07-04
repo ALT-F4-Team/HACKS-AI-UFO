@@ -33,6 +33,9 @@
   <li>
     IO
   </li>
+  <li>
+    Openpyxl
+  </li>
 </ul>
 
 ---
@@ -43,7 +46,11 @@
   <li>Скачать модель по ссылке ниже</li>
   <li>Поместить её в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/522a3ffb6b32cab7a6ccabd2b27099021d264654/web/models"><b>models</b></a> в корне папке <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a></li>
   <li>вставте <a href="https://github.com/seyoulax/vacansies_classifier_V1/blob/ca19c9b1ed35b7985cb489e3d797359f67b5f715/web/app.py#L15">здесь</a> путь к модели</li>
-  <li>Через терминал зайти в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a> и выполнить команду</li>
+  <li>Через терминал зайти в папку <a href="https://github.com/seyoulax/vacansies_classifier_V1/tree/95b2265fb3553904db50908d80ca379dfbc85662/web"><b>web</b></a> и выполнить команды  
+      
+  <div width="50px" height="50px"> --> </div>
+  
+  <ul>
   <li>
     
 ```Shell
@@ -51,6 +58,15 @@ python app.py
 ```
 
   </li>
+    <li>
+    
+```Shell
+npm install -r requirements.txt
+```
+
+  </li>
+  </ul>
+    </li>
 </ul>
 
 ### Модель доступна по <a href="https://drive.google.com/file/d/1a-o-HGmqrslVKZeUEBC2yGgW9RxxM8xX/view?usp=drive_link">ссылке<a/>
