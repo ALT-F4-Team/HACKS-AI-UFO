@@ -51,17 +51,17 @@
   <div width="50px" height="50px"> --> </div>
   
   <ul>
+          <li>
+    
+```Shell
+npm install -r requirements.txt
+```
+
+  </li>
   <li>
     
 ```Shell
 python app.py
-```
-
-  </li>
-    <li>
-    
-```Shell
-npm install -r requirements.txt
 ```
 
   </li>
