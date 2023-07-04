@@ -1,0 +1,5 @@
+pandas
+torch
+transformers
+flask
+openpyxl
